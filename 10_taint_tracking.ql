@@ -21,7 +21,7 @@ class Config extends TaintTracking::Configuration {
   {
       exists(
           NetworkByteSwap nbs |
-          nbs.getLocation() = source.getLocation()
+          nbs = source.asExpr()
       )
   }
   override predicate isSink(DataFlow::Node sink) 
